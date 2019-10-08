@@ -1,0 +1,1 @@
+dir *.md /b>name.txt

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Linux下LNMP环境简介 | 喵巨人笔记</title>
+    <meta name="description" content="喵巨人学习笔记，包含前端开发、后端开发、服务器运维等">
+    <link rel="icon" href="/favicon.ico">
+    
+    <link rel="preload" href="/assets/css/0.styles.737906f3.css" as="style"><link rel="preload" href="/assets/js/app.373ebcd7.js" as="script"><link rel="preload" href="/assets/js/3.bfdcfffd.js" as="script"><link rel="preload" href="/assets/js/10.c7e5de1e.js" as="script"><link rel="prefetch" href="/assets/js/1.2bae9d15.js"><link rel="prefetch" href="/assets/js/11.947faf55.js"><link rel="prefetch" href="/assets/js/12.2472fbdd.js"><link rel="prefetch" href="/assets/js/13.9e618bf6.js"><link rel="prefetch" href="/assets/js/14.0356e7d9.js"><link rel="prefetch" href="/assets/js/15.3c111c61.js"><link rel="prefetch" href="/assets/js/16.b9482d17.js"><link rel="prefetch" href="/assets/js/17.98b647f1.js"><link rel="prefetch" href="/assets/js/18.76c49e99.js"><link rel="prefetch" href="/assets/js/19.1c20d10f.js"><link rel="prefetch" href="/assets/js/20.dc70c8fc.js"><link rel="prefetch" href="/assets/js/21.467ebb2d.js"><link rel="prefetch" href="/assets/js/22.b0a1d0f3.js"><link rel="prefetch" href="/assets/js/23.b00a4bf6.js"><link rel="prefetch" href="/assets/js/24.ca272cf3.js"><link rel="prefetch" href="/assets/js/25.14adbaf7.js"><link rel="prefetch" href="/assets/js/26.f97564e3.js"><link rel="prefetch" href="/assets/js/27.8e4bdef8.js"><link rel="prefetch" href="/assets/js/28.82f93745.js"><link rel="prefetch" href="/assets/js/29.987f527d.js"><link rel="prefetch" href="/assets/js/30.b00d5021.js"><link rel="prefetch" href="/assets/js/31.0373fca1.js"><link rel="prefetch" href="/assets/js/32.f4b40012.js"><link rel="prefetch" href="/assets/js/33.befd342c.js"><link rel="prefetch" href="/assets/js/34.db1e4f82.js"><link rel="prefetch" href="/assets/js/35.738f4fb7.js"><link rel="prefetch" href="/assets/js/36.06c6d04e.js"><link rel="prefetch" href="/assets/js/37.984d486d.js"><link rel="prefetch" href="/assets/js/38.b68b4bc8.js"><link rel="prefetch" href="/assets/js/39.58b551b7.js"><link rel="prefetch" href="/assets/js/4.730b44f6.js"><link rel="prefetch" href="/assets/js/40.e430db82.js"><link rel="prefetch" href="/assets/js/41.e9743d5e.js"><link rel="prefetch" href="/assets/js/42.3971888d.js"><link rel="prefetch" href="/assets/js/43.656a7310.js"><link rel="prefetch" href="/assets/js/44.9fa3cf39.js"><link rel="prefetch" href="/assets/js/45.cd770c5b.js"><link rel="prefetch" href="/assets/js/46.15edd465.js"><link rel="prefetch" href="/assets/js/47.3e4c8435.js"><link rel="prefetch" href="/assets/js/48.20578371.js"><link rel="prefetch" href="/assets/js/49.16e33620.js"><link rel="prefetch" href="/assets/js/5.34ad1117.js"><link rel="prefetch" href="/assets/js/50.342ff260.js"><link rel="prefetch" href="/assets/js/51.521f5e9b.js"><link rel="prefetch" href="/assets/js/52.6a76ec0a.js"><link rel="prefetch" href="/assets/js/53.69444c3a.js"><link rel="prefetch" href="/assets/js/54.07b58fd5.js"><link rel="prefetch" href="/assets/js/55.8f53b56c.js"><link rel="prefetch" href="/assets/js/56.19c3bd08.js"><link rel="prefetch" href="/assets/js/57.73b77cef.js"><link rel="prefetch" href="/assets/js/58.736d163d.js"><link rel="prefetch" href="/assets/js/59.260f8893.js"><link rel="prefetch" href="/assets/js/6.7846ba7f.js"><link rel="prefetch" href="/assets/js/60.31913508.js"><link rel="prefetch" href="/assets/js/61.044fc743.js"><link rel="prefetch" href="/assets/js/62.e1cdd68a.js"><link rel="prefetch" href="/assets/js/63.46360f15.js"><link rel="prefetch" href="/assets/js/64.97176203.js"><link rel="prefetch" href="/assets/js/65.2103cfda.js"><link rel="prefetch" href="/assets/js/66.9a7763c9.js"><link rel="prefetch" href="/assets/js/67.1c1bc12c.js"><link rel="prefetch" href="/assets/js/68.ec583a59.js"><link rel="prefetch" href="/assets/js/69.dc6b9224.js"><link rel="prefetch" href="/assets/js/7.2d505d86.js"><link rel="prefetch" href="/assets/js/70.6720396d.js"><link rel="prefetch" href="/assets/js/71.649f88b5.js"><link rel="prefetch" href="/assets/js/72.fd020fed.js"><link rel="prefetch" href="/assets/js/73.1a58133e.js"><link rel="prefetch" href="/assets/js/74.ce0c5fdf.js"><link rel="prefetch" href="/assets/js/75.10bc575a.js"><link rel="prefetch" href="/assets/js/76.c28e2c30.js"><link rel="prefetch" href="/assets/js/77.4fecac7f.js"><link rel="prefetch" href="/assets/js/78.35acfd0c.js"><link rel="prefetch" href="/assets/js/79.8d634081.js"><link rel="prefetch" href="/assets/js/8.80a2de5f.js"><link rel="prefetch" href="/assets/js/80.fc226694.js"><link rel="prefetch" href="/assets/js/81.ae543107.js"><link rel="prefetch" href="/assets/js/82.336196da.js"><link rel="prefetch" href="/assets/js/83.92783483.js"><link rel="prefetch" href="/assets/js/84.6b5d6b7b.js"><link rel="prefetch" href="/assets/js/85.96cb4fa9.js"><link rel="prefetch" href="/assets/js/86.ccb3db59.js"><link rel="prefetch" href="/assets/js/87.dd5a823e.js"><link rel="prefetch" href="/assets/js/9.e7a537d5.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.737906f3.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">喵巨人笔记</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">前端开发</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/前端开发/css/" class="nav-link">CSS</a></li><li class="dropdown-item"><!----> <a href="/前端开发/javascript/" class="nav-link">JavaScript</a></li><li class="dropdown-item"><!----> <a href="/前端开发/vue/" class="nav-link">vue</a></li><li class="dropdown-item"><!----> <a href="/前端开发/nuxt/" class="nav-link">nuxt</a></li><li class="dropdown-item"><!----> <a href="/前端开发/插件/" class="nav-link">插件</a></li><li class="dropdown-item"><!----> <a href="/前端开发/other/" class="nav-link">其他</a></li></ul></div></div><div class="nav-item"><a href="/php/" class="nav-link">php</a></div><div class="nav-item"><a href="/linux/" class="nav-link router-link-active">linux</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">其他</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/其他/Markdown简介.html" class="nav-link">Markdown简介</a></li></ul></div></div><div class="nav-item"><a href="/关于作者.html" class="nav-link">关于</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">前端开发</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/前端开发/css/" class="nav-link">CSS</a></li><li class="dropdown-item"><!----> <a href="/前端开发/javascript/" class="nav-link">JavaScript</a></li><li class="dropdown-item"><!----> <a href="/前端开发/vue/" class="nav-link">vue</a></li><li class="dropdown-item"><!----> <a href="/前端开发/nuxt/" class="nav-link">nuxt</a></li><li class="dropdown-item"><!----> <a href="/前端开发/插件/" class="nav-link">插件</a></li><li class="dropdown-item"><!----> <a href="/前端开发/other/" class="nav-link">其他</a></li></ul></div></div><div class="nav-item"><a href="/php/" class="nav-link">php</a></div><div class="nav-item"><a href="/linux/" class="nav-link router-link-active">linux</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">其他</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/其他/Markdown简介.html" class="nav-link">Markdown简介</a></li></ul></div></div><div class="nav-item"><a href="/关于作者.html" class="nav-link">关于</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Linux下LNMP环境简介</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/linux/Linux%E4%B8%8BLNMP%E7%8E%AF%E5%A2%83%E7%AE%80%E4%BB%8B.html#lnmpa安装" class="sidebar-link">LNMPA安装</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/linux/Linux%E4%B8%8BLNMP%E7%8E%AF%E5%A2%83%E7%AE%80%E4%BB%8B.html#安装-memcached" class="sidebar-link">安装 Memcached</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/linux/Linux%E4%B8%8BLNMP%E7%8E%AF%E5%A2%83%E7%AE%80%E4%BB%8B.html#添加虚拟主机" class="sidebar-link">添加虚拟主机</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/linux/Linux%E4%B8%8BLNMP%E7%8E%AF%E5%A2%83%E7%AE%80%E4%BB%8B.html#伪静态管理" class="sidebar-link">伪静态管理</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/linux/Linux%E4%B8%8BLNMP%E7%8E%AF%E5%A2%83%E7%AE%80%E4%BB%8B.html#列出网站（虚拟主机）" class="sidebar-link">列出网站（虚拟主机）</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/linux/Linux%E4%B8%8BLNMP%E7%8E%AF%E5%A2%83%E7%AE%80%E4%BB%8B.html#删除网站（虚拟主机）" class="sidebar-link">删除网站（虚拟主机）</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/linux/Linux%E4%B8%8BLNMP%E7%8E%AF%E5%A2%83%E7%AE%80%E4%BB%8B.html#默认网站（虚拟主机）" class="sidebar-link">默认网站（虚拟主机）</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/linux/Linux%E4%B8%8BLNMP%E7%8E%AF%E5%A2%83%E7%AE%80%E4%BB%8B.html#修改虚拟主机配置" class="sidebar-link">修改虚拟主机配置</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/linux/Linux%E4%B8%8BLNMP%E7%8E%AF%E5%A2%83%E7%AE%80%E4%BB%8B.html#反向代理设置" class="sidebar-link">反向代理设置</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/linux/Linux%E4%B8%8BLNMP%E7%8E%AF%E5%A2%83%E7%AE%80%E4%BB%8B.html#mysql" class="sidebar-link">mySQL</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/linux/Linux%E4%B8%8BLNMP%E7%8E%AF%E5%A2%83%E7%AE%80%E4%BB%8B.html#重设mysql的root密码" class="sidebar-link">重设mySQL的root密码</a></li><li class="sidebar-sub-header"><a href="/linux/Linux%E4%B8%8BLNMP%E7%8E%AF%E5%A2%83%E7%AE%80%E4%BB%8B.html#防火墙开放3306端口" class="sidebar-link">防火墙开放3306端口</a></li></ul></li><li><a href="/linux/Linux%E4%B8%8BLNMP%E7%8E%AF%E5%A2%83%E7%AE%80%E4%BB%8B.html#nginx与apache禁止目录执行php文件权限" class="sidebar-link">Nginx与Apache禁止目录执行php文件权限</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/linux/Linux%E4%B8%8BLNMP%E7%8E%AF%E5%A2%83%E7%AE%80%E4%BB%8B.html#nginx与apache禁止-htaccess文件下载" class="sidebar-link">Nginx与Apache禁止.htaccess文件下载</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/linux/Linux%E4%B8%8BLNMP%E7%8E%AF%E5%A2%83%E7%AE%80%E4%BB%8B.html#lnmpa-设置404等错误页面" class="sidebar-link">LNMPA 设置404等错误页面</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/linux/Linux%E4%B8%8BLNMP%E7%8E%AF%E5%A2%83%E7%AE%80%E4%BB%8B.html#lnmpa的ip访问的默认网站设置" class="sidebar-link">LNMPA的IP访问的默认网站设置</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/linux/Linux%E4%B8%8BLNMP%E7%8E%AF%E5%A2%83%E7%AE%80%E4%BB%8B.html#lnmpa使用ip-端口号的形式访问站点设置" class="sidebar-link">LNMPA使用IP + 端口号的形式访问站点设置</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/linux/Linux%E4%B8%8BLNMP%E7%8E%AF%E5%A2%83%E7%AE%80%E4%BB%8B.html#常用命令" class="sidebar-link">常用命令</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/linux/Linux%E4%B8%8BLNMP%E7%8E%AF%E5%A2%83%E7%AE%80%E4%BB%8B.html#相关网站" class="sidebar-link">相关网站</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="linux下lnmp环境简介"><a href="#linux下lnmp环境简介" aria-hidden="true" class="header-anchor">#</a> Linux下LNMP环境简介</h1> <h2 id="lnmpa安装"><a href="#lnmpa安装" aria-hidden="true" class="header-anchor">#</a> LNMPA安装</h2> <ul><li>网址：http://lnmp.org/install.html</li> <li>安装步骤：</li></ul> <blockquote><ol><li>使用putty、SSH Secure Shell Client或类似的SSH工具登陆VPS或服务器。</li> <li>安装前运行screen命令，创建screen会话，防止网络突然掉线或者不小心关闭putty等：<code>screen -S lnmp</code>
+如果提示screen: command not found 命令不存在可以执行：<code>yum install screen</code> 或 <code>apt-get install screen</code>安装，详细内容参考<a href="http://www.vpser.net/manage/run-screen-lnmp.html" target="_blank" rel="noopener noreferrer">screen教程<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>。</li> <li>下载并安装LNMP一键安装包：可以选择使用下载版（推荐国外或者美国VPS使用）或者完整版（推荐国内VPS使用），两者没什么区别，只是完整版把一些需要的源码文件预先放到安装包里。
+安装LNMP执行：<code>wget -c http://soft.vpser.net/lnmp/lnmp1.2-full.tar.gz &amp;&amp; tar zxf lnmp1.2-full.tar.gz &amp;&amp; cd lnmp1.2-full &amp;&amp; ./install.sh lnmp</code>。
+需要安装LNMPA或LAMP，将./install.sh 后面的参数替换为lnmpa或lamp即可。
+备注：安装命令可以分别执行
+<ul><li><code>wget -c http://soft.vpser.net/lnmp/lnmp1.2-full.tar.gz</code></li> <li><code>tar zxf lnmp1.2-full.tar.gz</code></li> <li><code>cd lnmp1.2-full</code></li> <li><code>./install.sh lnmpa</code> <strong>备注：</strong></li> <li>lnmpa = lnmp + Apache</li> <li>MySQL版本：MySQL 5.5.42（default）（安装最新的吧）</li> <li>PHP版本：PHP 5.4.40（default）（ecshop建议安装5.4）</li> <li>Apache版本：Apache 2.4.10</li> <li>Nginx、MySQL、PHP都是running，80和3306端口都存在，并Install lnmp V1.2 completed! enjoy it.的话，说明已经安装成功。</li></ul></li></ol></blockquote> <h2 id="安装-memcached"><a href="#安装-memcached" aria-hidden="true" class="header-anchor">#</a> 安装 Memcached</h2> <p>进入lnmp解压后的目录，执行：<code>./addons.sh install memcached</code> <a href="https://www.cmhello.com/lnmp-memcached.html" target="_blank" rel="noopener noreferrer">LNMP 开启 Memcached 内存缓存加速网站<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>
+卸载是：<code>./addons.sh uninstall memcached</code></p> <p>YII用的是memcache，不是memcached，安装的时候，选择1</p> <h2 id="添加虚拟主机"><a href="#添加虚拟主机" aria-hidden="true" class="header-anchor">#</a> 添加虚拟主机</h2> <p><code>lnmp vhost add</code></p> <blockquote><p><strong>备注</strong></p> <ol><li>带<code>www</code>和不带<code>www</code>的是不同的域名，若需同时访问，需要同时绑定。</li> <li>网站目录的路径必须为全路径（即以/开头的完整路径）。</li> <li>日志<code>Y</code>直接回车默认即可。</li> <li>MySQL一般使用外部的数据库，此处<code>N</code>。</li></ol></blockquote> <p>备注：虚拟主机默认是root账号所有，程序等读写文件会有权限问题，需要修改虚拟主机目录的读写权限。
+例如虚拟主机目录：<code>/data/www/about</code>，命令如下：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>chmod -R 777 /data/www/about
+chown -R www:www /data/www/about
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h2 id="伪静态管理"><a href="#伪静态管理" aria-hidden="true" class="header-anchor">#</a> 伪静态管理</h2> <blockquote><p>虚拟主机配置文件：<code>/usr/local/nginx/conf/vhost/域名.conf</code>
+伪静态规则文件需要放在<code>/usr/local/nginx/conf/</code>下面</p></blockquote> <h2 id="列出网站（虚拟主机）"><a href="#列出网站（虚拟主机）" aria-hidden="true" class="header-anchor">#</a> 列出网站（虚拟主机）</h2> <p><code>lnmp vhost list</code></p> <h2 id="删除网站（虚拟主机）"><a href="#删除网站（虚拟主机）" aria-hidden="true" class="header-anchor">#</a> 删除网站（虚拟主机）</h2> <p><code>lnmp vhost del</code></p> <blockquote><p>以上命令只是删除虚拟主机配置文件，网站文件并不会删除，需要自己删除。
+chattr -i /网站目录/.user.ini后才能删除网站目录</p></blockquote> <h2 id="默认网站（虚拟主机）"><a href="#默认网站（虚拟主机）" aria-hidden="true" class="header-anchor">#</a> 默认网站（虚拟主机）</h2> <blockquote><p>LNMP默认网站配置文件：<code>/usr/local/nginx/conf/nginx.conf</code>
+LNMPA默认网站配置文件：<code>/usr/local/nginx/conf/nginx.conf</code>和<code>/usr/local/apache/conf/extra/httpd-vhosts.conf</code>
+LAMP默认网站配置文件：<code>/usr/local/apache/conf/extra/httpd-vhosts.conf</code></p></blockquote> <h2 id="修改虚拟主机配置"><a href="#修改虚拟主机配置" aria-hidden="true" class="header-anchor">#</a> 修改虚拟主机配置</h2> <blockquote><p>Nginx配置文件：<code>/usr/local/nginx/conf/vhost/</code>目录下的相关文件。
+Apache配置文件：<code>/usr/local/apache/conf/vhost/</code>目录下的相关文件。
+修改完成后，需重启Nginx或者Apache后才生效。</p></blockquote> <h2 id="反向代理设置"><a href="#反向代理设置" aria-hidden="true" class="header-anchor">#</a> 反向代理设置</h2> <ol><li>修改nginx的虚拟主机配置。eg：<code>www.abc.com.conf</code>。原文件内容如下：</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>server
+    {
+        listen 80;
+        #listen [::]:80;
+        server_name www.abc.com abc.com;
+        index index.html index.htm index.php default.html default.htm default.php;
+        root  /data/www/test;
+
+        location /
+        {
+            try_files $uri @apache;
+        }
+
+        location @apache
+        {
+            internal;
+            proxy_pass http://127.0.0.1:88;
+            include proxy.conf;
+        }
+
+        location ~ [^/]\.php(/|$)
+        {
+            proxy_pass http://127.0.0.1:88;
+            include proxy.conf;
+        }
+
+        location ~ .*\.(gif|jpg|jpeg|png|bmp|swf)$
+        {
+            expires      30d;
+        }
+
+        location ~ .*\.(js|css)?$
+        {
+            expires      12h;
+        }
+
+        access_log off;
+    }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br></div></div><p>修改为</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>server
+    {
+        listen 80;
+        server_name www.abc.com abc.com;
+
+        location /
+        {
+            proxy_pass              http://xxx.xxx.xxx.xxx:xx;
+            proxy_redirect          off;
+            proxy_set_header        X-Real-IP       $remote_addr;
+            proxy_set_header        X-Forwarded-For $proxy_add_x_forwarded_for; 
+        }
+
+        access_log off;
+    }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><p>其中<code>http://xxx.xxx.xxx.xxx:xx</code>为代理的服务器。</p> <ol start="2"><li>检查nginx的配置是否正常：<code>/usr/local/nginx/sbin/nginx -t</code>。正常时，提示代码如下</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>the configuration file /usr/local/nginx/conf/nginx.conf syntax is ok
+configuration file /usr/local/nginx/conf/nginx.conf test is successful
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><ol start="3"><li><p>使配置生效（可以直接lnmp restart 重启lnmpa环境）：kill -HUP <code>cat /usr/local/nginx/logs/nginx.pid</code> 。</p></li> <li><p>配置生效后就可以用域名访问代理的网站了。</p></li></ol> <h2 id="mysql"><a href="#mysql" aria-hidden="true" class="header-anchor">#</a> mySQL</h2> <h3 id="重设mysql的root密码"><a href="#重设mysql的root密码" aria-hidden="true" class="header-anchor">#</a> 重设mySQL的root密码</h3> <p>执行如下命令：</p> <blockquote><p><code>wget http://soft.vpser.net/lnmp/ext/reset_mysql_root_password.sh</code> <code>sh reset_mysql_root_password.sh</code></p></blockquote> <h3 id="防火墙开放3306端口"><a href="#防火墙开放3306端口" aria-hidden="true" class="header-anchor">#</a> 防火墙开放3306端口</h3> <ul><li>执行命令：<code>vi /etc/sysconfig/iptables</code></li> <li>添加以下记录：<code>-A INPUT -p tcp -m tcp --dport 3306 -j ACCEPT</code></li> <li>保存退出</li></ul> <h2 id="nginx与apache禁止目录执行php文件权限"><a href="#nginx与apache禁止目录执行php文件权限" aria-hidden="true" class="header-anchor">#</a> Nginx与Apache禁止目录执行php文件权限</h2> <p>服务器配置过程中，经常需要对指定的目录进行权限配置，比如上传目录，是属于不安全目录，我们需要禁止其执行php脚本的权限，nginx与apache禁止目录执行php文件权限方法如下：
+<strong>Nginx禁止目录执行php文件权限</strong>
+打开Nginx相应的虚拟主机配置文件，在server处添加如下代码
+（禁止data/csv目录执行php文件权限）</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>location ~ /data/csv/.*.(php|php5)?$
+{
+	deny all;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>（禁止data与upload目录执行php文件权限）</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>location ~ /(data|upload)/.*.(php|php5)?$
+{
+	deny all;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>配置完后，重启Nginx即可。</p> <p><strong>Apache禁止目录执行php文件权限</strong>
+以Apache 模块方式运行 PHP，打开Apache相应的虚拟主机配置文件，在文件中添加如下代码：
+（禁止data/csv目录执行php文件权限）</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;Directory /data/www/about/trunk/data/csv&gt;
+	php_flag engine off
+	&lt;Files ~ &quot;.php&quot;&gt;
+		Order allow,deny
+		Deny from all
+	&lt;/Files&gt;
+&lt;/Directory&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>配置完成后，重启Apache即可。</p> <blockquote><p><strong>参考网站</strong></p> <ul><li><a href="http://www.php100.com/html/program/nginx/2013/0905/5534.html" target="_blank" rel="noopener noreferrer">nginx与Apache禁止目录执行php文件权限<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></blockquote> <h2 id="nginx与apache禁止-htaccess文件下载"><a href="#nginx与apache禁止-htaccess文件下载" aria-hidden="true" class="header-anchor">#</a> Nginx与Apache禁止.htaccess文件下载</h2> <p><strong>apache配置</strong>
+在虚拟主机的配置文件中的Directory里面，添加如下代码：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;Files .htaccess&gt;  
+	Order allow,deny  
+	deny from all  
+&lt;/Files&gt;  
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p><strong>nginx配置</strong>
+在虚拟主机的配置文件中，添加如下代码：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>location ~ /.htaccess$
+{
+	deny all;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>配置完成后，重启lnmp环境。</p> <h2 id="lnmpa-设置404等错误页面"><a href="#lnmpa-设置404等错误页面" aria-hidden="true" class="header-anchor">#</a> LNMPA 设置404等错误页面</h2> <p><strong>方法一</strong>：设置<code>.htaccess</code>文件，添加如下代码：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>ErrorDocument 400 /errpage/400.html
+ErrorDocument 401 /errpage/401.html
+ErrorDocument 403 /errpage/403.html
+ErrorDocument 404 /errpage/404.html
+ErrorDocument 405 /errpage/405.html
+ErrorDocument 500 /errpage/500.html
+ErrorDocument 503 /errpage/503.html
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p><strong>方法二</strong>：设置nginx配置
+①：修改<code>/usr/local/nginx/conf/nginx.conf</code>文件
+在fastcgi_temp_file_write_size 128k; 下面添加</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>fastcgi_intercept_errors on;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>②：修改虚拟主机的配置文件，eg：<code>/usr/local/nginx/conf/vhost/www.abc.com.log</code>
+添加如下代码：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>error_page 400 = /errpage/400.html;
+error_page 401 = /errpage/401.html;
+error_page 403 = /errpage/403.html;
+error_page 404 = /errpage/404.html;
+error_page 405 = /errpage/405.html;
+error_page 500 = /errpage/500.html;
+error_page 503 = /errpage/503.html;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>③：测试配置：<code>/usr/local/nginx/sbin/nginx -t</code>
+④：没有错误就重启nginx：<code>/etc/init.d/nginx restart</code></p> <h2 id="lnmpa的ip访问的默认网站设置"><a href="#lnmpa的ip访问的默认网站设置" aria-hidden="true" class="header-anchor">#</a> LNMPA的IP访问的默认网站设置</h2> <ol><li>配置nginx：打开文件<code>/usr/local/nginx/conf/nginx.conf</code>文件，在<code>server</code> 处编辑站点绑定的目录</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>listen 80 default_server;
+#listen [::]:80 default_server ipv6only=on;
+server_name www.lnmp.org;
+index index.html index.htm index.php;
+root  /data/www/about;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><ol start="2"><li>配置apache：打开文件：<code>/usr/local/apache/conf/extra/httpd-vhosts.conf</code>文件，编辑站点绑定的目录</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;VirtualHost *:88&gt;
+ServerAdmin webmaster@example.com
+#php_admin_value open_basedir &quot;/data/www/about:/tmp/:/var/tmp/:/proc/&quot;
+DocumentRoot &quot;/data/www/about&quot;
+ServerName www.lnmp.org
+ErrorLog &quot;/data/wwwlogs/IP-error_log&quot;
+CustomLog &quot;/data/wwwlogs/IP-access_log&quot; common
+&lt;Directory &quot;/data/www/about&quot;&gt;
+    SetOutputFilter DEFLATE
+    Options FollowSymLinks
+    AllowOverride All
+    Order allow,deny
+    Allow from all
+    DirectoryIndex index.html index.php
+&lt;/Directory&gt;
+&lt;/VirtualHost&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br></div></div><ol start="3"><li><p>测试 nginx 和 apache 配置是否正确。</p></li> <li><p>重启 lnmp，使其生效即可</p></li></ol> <p><strong>备注</strong>
+默认站点使用的端口号为80端口，apache使用的端口号为88端口。
+在给该IP设置虚拟主机时，不要占用这两个端口。</p> <h2 id="lnmpa使用ip-端口号的形式访问站点设置"><a href="#lnmpa使用ip-端口号的形式访问站点设置" aria-hidden="true" class="header-anchor">#</a> LNMPA使用IP + 端口号的形式访问站点设置</h2> <p>此IP为服务器分配的IP，以192.168.0.66:8880为例</p> <ol><li>配置 nginx：打开文件<code>/usr/local/nginx/conf/vhost/192.168.0.66.conf</code>，为其添加站点配置</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>server
+    {
+        listen 8880;
+        #listen [::]:80;
+        server_name 192.168.0.66;
+        index index.html index.htm index.php default.html default.htm default.php;
+        root  /data/www/guide;
+
+        location /
+        {
+            try_files $uri @apache;
+        }
+
+        location @apache
+        {
+            internal;
+            proxy_pass http://127.0.0.1:880;
+            include proxy.conf;
+        }
+
+        location ~ [^/]\.php(/|$)
+        {
+            proxy_pass http://127.0.0.1:880;
+            include proxy.conf;
+        }
+
+        location ~ .*\.(gif|jpg|jpeg|png|bmp|swf)$
+        {
+            expires      30d;
+        }
+
+        location ~ .*\.(js|css)?$
+        {
+            expires      12h;
+        }
+        access_log  /data/wwwlogs/192.168.0.66.log  access;
+    }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br></div></div><ol start="2"><li>配置 apache ：打开文件<code>/usr/local/apache/conf/vhost/192.168.0.66.conf</code>，为其添加站点配置（nginx里面为apache设置的端口号为880）</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;VirtualHost *:880&gt;
+ServerAdmin webmaster@example.com
+php_admin_value open_basedir &quot;/data/www/guide:/tmp/:/var/tmp/:/proc/&quot;
+DocumentRoot &quot;/data/www/guide&quot;
+ServerName 192.168.0.66
+ErrorLog &quot;/data/wwwlogs/192.168.0.66-error_log&quot;
+CustomLog &quot;/data/wwwlogs/192.168.0.66-access_log&quot; common
+&lt;Directory &quot;/data/www/guide&quot;&gt;
+    SetOutputFilter DEFLATE
+    Options FollowSymLinks
+    AllowOverride All
+    Order allow,deny
+    Allow from all
+    DirectoryIndex index.html index.php
+&lt;/Directory&gt;
+&lt;/VirtualHost&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br></div></div><ol start="3"><li><p>测试 nginx 和 apache 配置是否正确。</p></li> <li><p>重启 lnmp，使其生效即可</p></li></ol> <h2 id="常用命令"><a href="#常用命令" aria-hidden="true" class="header-anchor">#</a> 常用命令</h2> <blockquote><ul><li>检测nginx配置是否正确：<code>/usr/local/nginx/sbin/nginx -t</code></li> <li>重启nginx：<code>/usr/local/nginx/sbin/nginx -s reload</code></li> <li>检测apache配置是否正确：切换到apache目录 <code>cd /usr/local/apache/bin/</code> 使用test：<code>./apachectl configtest</code></li> <li>重启apache：<code>service httpd restart</code> 或者 <code>/etc/rc.d/init.d/httpd restart</code></li></ul></blockquote> <p>nginx编译</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>./configure --user=www --group=www --prefix=/usr/local/nginx --with-http_stub_status_module --with-http_ssl_module --with-http_spdy_module --with-http_gzip_static_module --with-ipv6 --with-http_sub_module --with-http_mp4_module --with-http_flv_module
+make
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h2 id="相关网站"><a href="#相关网站" aria-hidden="true" class="header-anchor">#</a> 相关网站</h2> <p><a href="http://lnmp.org/" target="_blank" rel="noopener noreferrer">LNMP一键安装包<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.373ebcd7.js" defer></script><script src="/assets/js/3.bfdcfffd.js" defer></script><script src="/assets/js/10.c7e5de1e.js" defer></script>
+  </body>
+</html>
